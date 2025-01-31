@@ -75,8 +75,8 @@ async def login_and_crawl():
         print(f"🔹 CSRF Token Found: {csrf_token}")
 
     # Fill login form
-    await page.type("#username", "cats@logmonitor.eu")
-    await page.type("#password", "Kockysoucool123")
+    await page.type("#username", "USER")
+    await page.type("#password", "PWD")
 
     if csrf_token:
         await page.evaluate(f"document.querySelector('[name=csrf_token]').value = '{csrf_token}';")
